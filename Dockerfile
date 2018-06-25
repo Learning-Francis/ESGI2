@@ -6,5 +6,5 @@ COPY client.cnf /etc/mysql/mariadb.conf.d/client.cnf
 COPY server.cnf /etc/mysql/mariadb.conf.d/server.cnf
 COPY mysql-clients.cnf /etc/mysql/mariadb.conf.d/mysql-clients.cnf
 COPY mysql.sh /tmp/mysql.sh
-CMD chmod +w /tmp/mysql.sh
+CMD chmod +x /tmp/mysql.sh
 RUN ["/bin/bash", "-c", "/tmp/mysql.sh"]
